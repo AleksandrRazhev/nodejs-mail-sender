@@ -1,9 +1,9 @@
 const nodemailer = require("nodemailer");
 
 const transportObject = {
-  host: "smtp.mail.ru",
-  port: "465",
-  secure: true,
+  host: process.env.HOST,
+  port: process.env.SMTP_PORT,
+  secure: process.env.SECURE,
   auth: {
     user: process.env.MAIL,
     pass: process.env.PASSWORD,
